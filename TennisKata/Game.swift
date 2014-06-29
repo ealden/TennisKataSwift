@@ -38,7 +38,11 @@ class Game {
         let player2TennisScore = tennisScores[player2.getScore()]
 
         if player1TennisScore && player2TennisScore {
-            return "\(player1TennisScore!)-\(player2TennisScore)"
+            if player1TennisScore! == player2TennisScore {
+                return "\(player1TennisScore!)-All"
+            } else {
+                return "\(player1TennisScore!)-\(player2TennisScore)"
+            }
         } else {
             return ""
         }

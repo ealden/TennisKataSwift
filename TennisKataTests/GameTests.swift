@@ -16,8 +16,8 @@ class GameTests: XCTestCase {
         super.tearDown()
     }
 
-    func testScoreShouldBeLoveLoveAtTheStartOfTheGame() {
-        XCTAssertEqual(game.getScore(), "Love-Love")
+    func testScoreShouldBeLoveAllAtTheStartOfTheGame() {
+        XCTAssertEqual(game.getScore(), "Love-All")
     }
 
     func testScoreShouldBeFifteenLoveWhenPlayerOneScores() {
