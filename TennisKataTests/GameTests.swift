@@ -100,4 +100,22 @@ class GameTests: XCTestCase {
 
         XCTAssertEqual(game.getScore(), "Duece")
     }
+
+    func testScoreShouldBeFifteenAllWhenBothPlayersScore() {
+        player1.score()
+
+        player2.score()
+
+        XCTAssertEqual(game.getScore(), "Fifteen-All")
+    }
+
+    func testScoreShouldBeThirtyAllWhenBothPlayersScoreTwice() {
+        player1.score()
+        player1.score()
+
+        player2.score()
+        player2.score()
+
+        XCTAssertEqual(game.getScore(), "Thirty-All")
+    }
 }
