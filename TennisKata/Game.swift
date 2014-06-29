@@ -32,8 +32,10 @@ class Game {
             return "Advantage Player 1"
         }
 
-        if player2.getScore() == 4 {
+        if (player2.getScore() > 3) && (player2.getScore() - player1.getScore() > 1) {
             return "Player 2 wins!"
+        } else if (player2.getScore() > 3) && (player2.getScore() - player1.getScore() == 1) {
+            return "Advantage Player 2"
         }
 
         let player1TennisScore = tennisScores[player1.getScore()]
