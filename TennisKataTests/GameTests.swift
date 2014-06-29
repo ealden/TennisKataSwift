@@ -88,4 +88,16 @@ class GameTests: XCTestCase {
 
         XCTAssertEqual(game.getScore(), "Player 2 wins!")
     }
+
+    func testScoreShouldBeDueceWhenBothPlayersScoreThrice() {
+        player1.score()
+        player1.score()
+        player1.score()
+
+        player2.score()
+        player2.score()
+        player2.score()
+
+        XCTAssertEqual(game.getScore(), "Duece")
+    }
 }
