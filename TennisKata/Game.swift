@@ -9,16 +9,24 @@ class Game {
     ]
 
     var player1Score = 0
+    var player2Score = 0
 
     func getScore() -> String {
-        if let tennisScore = tennisScores[player1Score] {
-            return "\(tennisScore)-Love"
-        }
+        let player1TennisScore = tennisScores[player1Score]
+        let player2TennisScore = tennisScores[player2Score]
 
-        return ""
+        if player1TennisScore && player2TennisScore {
+            return "\(player1TennisScore!)-\(player2TennisScore)"
+        } else {
+            return ""
+        }
     }
 
     func scorePlayer1() {
         player1Score += 1
+    }
+
+    func scorePlayer2() {
+        player2Score += 1
     }
 }
