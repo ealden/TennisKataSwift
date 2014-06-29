@@ -4,7 +4,8 @@ class Game {
     let tennisScores = [
         0: "Love",
         1: "Fifteen",
-        2: "Thirty"
+        2: "Thirty",
+        3: "Forty"
     ]
 
     var player1Score = 0
