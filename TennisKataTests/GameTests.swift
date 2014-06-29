@@ -135,6 +135,15 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.getScore(), "Advantage Player 2")
     }
 
+    func testScoreShouldBeDeuceAgainWhenBothPlayersScoreAfterDeuce() {
+        deuce()
+
+        player1.score()
+        player2.score()
+
+        XCTAssertEqual(game.getScore(), "Deuce")
+    }
+
     func deuce() {
         player1.score()
         player2.score()
