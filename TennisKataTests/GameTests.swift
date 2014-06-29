@@ -21,28 +21,28 @@ class GameTests: XCTestCase {
     }
 
     func testScoreShouldBeFifteenLoveWhenPlayerOneScores() {
-        game.scorePlayer1()
+        player1.score()
 
         XCTAssertEqual(game.getScore(), "Fifteen-Love")
     }
 
     func testScoreShouldBeThirtyLoveWhenPlayerOneScoresTwice() {
-        game.scorePlayer1()
-        game.scorePlayer1()
+        player1.score()
+        player1.score()
 
         XCTAssertEqual(game.getScore(), "Thirty-Love")
     }
 
     func testScoreShouldBeFortyLoveWhenPlayerOneScoresThrice() {
-        game.scorePlayer1()
-        game.scorePlayer1()
-        game.scorePlayer1()
+        player1.score()
+        player1.score()
+        player1.score()
 
         XCTAssertEqual(game.getScore(), "Forty-Love")
     }
 
     func testScoreShouldBeLoveFifteenWhenPlayerTwoScores() {
-        game.scorePlayer2()
+        player2.score()
 
         XCTAssertEqual(game.getScore(), "Love-Fifteen")
     }

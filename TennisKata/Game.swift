@@ -31,12 +31,4 @@ class Game {
             return ""
         }
     }
-
-    func scorePlayer1() {
-        player1.score()
-    }
-
-    func scorePlayer2() {
-        player2.score()
-    }
 }
