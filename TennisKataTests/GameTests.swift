@@ -14,4 +14,10 @@ class GameTests: XCTestCase {
     func testScoreShouldBeLoveLoveAtTheStartOfTheGame() {
         XCTAssertEqual(game.getScore(), "Love-Love")
     }
+
+    func testScoreShouldBeFifteenLoveWhenPlayerOneScores() {
+        game.scorePlayer1()
+
+        XCTAssertEqual(game.getScore(), "Fifteen-Love")
+    }
 }
