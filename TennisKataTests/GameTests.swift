@@ -1,10 +1,15 @@
 import XCTest
 
 class GameTests: XCTestCase {
-    let game = Game()
+    var game = Game()
+
+    let player1 = Player()
+    let player2 = Player()
 
     override func setUp() {
         super.setUp()
+
+        game = Game(player1: player1, player2: player2)
     }
     
     override func tearDown() {
