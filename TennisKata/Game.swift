@@ -6,12 +6,14 @@ class Game {
     func getScore() -> String {
         if player1Score == 1 {
             return "Fifteen-Love"
+        } else if player1Score == 2 {
+            return "Thirty-Love"
         } else {
             return "Love-Love"
         }
     }
 
     func scorePlayer1() {
-        player1Score = 1
+        player1Score += 1
     }
 }
