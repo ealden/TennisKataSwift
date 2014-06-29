@@ -22,6 +22,10 @@ class Game {
     }
 
     func getScore() -> String {
+        if player1.getScore() == 4 {
+            return "Player 1 wins!"
+        }
+
         let player1TennisScore = tennisScores[player1.getScore()]
         let player2TennisScore = tennisScores[player2.getScore()]
 
