@@ -1,6 +1,8 @@
 import XCTest
 
 class PlayerTests: XCTestCase {
+    let player = Player()
+
     override func setUp() {
         super.setUp()
     }
@@ -9,7 +11,7 @@ class PlayerTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        XCTAssert(true, "Pass")
+    func testShouldReturn0IfPlayerHasNotScored() {
+        XCTAssertEqual(player.getScore(), 0)
     }
 }
