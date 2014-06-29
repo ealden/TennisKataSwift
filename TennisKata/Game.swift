@@ -26,6 +26,10 @@ class Game {
             return "Player 1 wins!"
         }
 
+        if player2.getScore() == 4 {
+            return "Player 2 wins!"
+        }
+
         let player1TennisScore = tennisScores[player1.getScore()]
         let player2TennisScore = tennisScores[player2.getScore()]
 
