@@ -26,8 +26,10 @@ class Game {
             return "Deuce"
         }
 
-        if player1.getScore() == 4 {
+        if (player1.getScore() > 3) && (player1.getScore() - player2.getScore() > 1) {
             return "Player 1 wins!"
+        } else if (player1.getScore() > 3) && (player1.getScore() - player2.getScore() == 1) {
+            return "Advantage Player 1"
         }
 
         if player2.getScore() == 4 {

@@ -118,4 +118,19 @@ class GameTests: XCTestCase {
 
         XCTAssertEqual(game.getScore(), "Thirty-All")
     }
+
+    func testScoreShouldBeAdvantagePlayer1WhenPlayerOneScoresAfterDeuece() {
+        player1.score()
+        player2.score()
+
+        player1.score()
+        player2.score()
+
+        player1.score()
+        player2.score()
+
+        player1.score()
+
+        XCTAssertEqual(game.getScore(), "Advantage Player 1")
+    }
 }
