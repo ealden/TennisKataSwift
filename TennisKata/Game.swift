@@ -23,7 +23,7 @@ class Game {
 
     func getScore() -> String {
         if (player1.getScore() == 3) && (player1.getScore() == player2.getScore()) {
-            return "Duece"
+            return "Deuce"
         }
 
         if player1.getScore() == 4 {
