@@ -14,4 +14,10 @@ class PlayerTests: XCTestCase {
     func testShouldReturn0IfPlayerHasNotScored() {
         XCTAssertEqual(player.getScore(), 0)
     }
+
+    func testShouldReturn1WhenPlayerScores() {
+        player.score()
+
+        XCTAssertEqual(player.getScore(), 1)
+    }
 }
