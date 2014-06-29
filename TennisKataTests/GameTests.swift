@@ -120,14 +120,7 @@ class GameTests: XCTestCase {
     }
 
     func testScoreShouldBeAdvantagePlayer1WhenPlayerOneScoresAfterDeuece() {
-        player1.score()
-        player2.score()
-
-        player1.score()
-        player2.score()
-
-        player1.score()
-        player2.score()
+        deuce()
 
         player1.score()
 
@@ -135,17 +128,21 @@ class GameTests: XCTestCase {
     }
 
     func testScoreShouldBeAdvantagePlayer2WhenPlayerTwoeScoresAfterDeuece() {
-        player1.score()
-        player2.score()
-
-        player1.score()
-        player2.score()
-
-        player1.score()
-        player2.score()
+        deuce()
 
         player2.score()
 
         XCTAssertEqual(game.getScore(), "Advantage Player 2")
+    }
+
+    func deuce() {
+        player1.score()
+        player2.score()
+
+        player1.score()
+        player2.score()
+
+        player1.score()
+        player2.score()
     }
 }
