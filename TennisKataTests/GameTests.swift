@@ -144,6 +144,15 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.getScore(), "Deuce")
     }
 
+    func testScoreShouldBePlayer1WinsWhenPlayerOneScoresTwiceAfterDeuce() {
+        deuce()
+
+        player1.score()
+        player1.score()
+
+        XCTAssertEqual(game.getScore(), "Player 1 wins!")
+    }
+
     func deuce() {
         player1.score()
         player2.score()
